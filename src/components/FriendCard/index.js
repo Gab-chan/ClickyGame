@@ -10,9 +10,6 @@ function FriendCard(props) {
       <div className="content">
         <h2><strong></strong> {props.name}</h2>
       </div>
-      <span onClick={() => props.removeFriend(props.id)} className="remove">
-        𝘅
-      </span>
     </div>
   );
 }

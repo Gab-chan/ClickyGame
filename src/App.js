@@ -9,27 +9,32 @@ class App extends Component {
   state = {
     friends,
     beenClicked: [],
-    score: 0
-  };
-
-  removeFriend = id => {
-    // Filter this.state.friends for friends with an id not equal to the id being removed
-    const friends = this.state.friends.filter(friend => friend.id !== id);
-    // Set this.state.friends equal to the new friends array
-    this.setState({ friends });
+    score: 0,
+    wins: 0,
+    loses: 0
   };
 
   handleClick = (id) => {
-    console.log("The card has been clicked " + id)
-    if(this.state.beenClicked.includes(id)){
-      this.setState({score: 0});
-    } else {
+   if(this.state.beenClicked.includes(id)){
+      this.setState({
+        score: 0,
+        loses: this.state.loses + 1
+      });
+    } else if (this.state.score === 9){
+      this.setState({
+      wins: this.state.wins + 1,
+      beenClicked: this.state.beenClicked.concat(id),
+      score: 0
+    });
+  } else {
       this.setState({
         beenClicked: this.state.beenClicked.concat(id),
         score: this.state.score + 1
       });
       this.shuffleHero();
     };
+
+    
   };
 
   shuffleHero = () => {
@@ -40,12 +45,13 @@ class App extends Component {
   render() {
     return (
       <Wrapper>
-        <h2>{this.state.score}</h2>
+        <h2>Wins: {this.state.wins}</h2>
+        <h2>Score: {this.state.score}</h2>
+        <h2>Loses: {this.state.loses}</h2>
         <Title>My Hero Clicky Game!</Title>
         {this.state.friends.map(friend => (
           <FriendCard
             handleClick={this.handleClick}
-            removeFriend={this.removeFriend}
             id={friend.id}
             key={friend.id}
             name={friend.name}
