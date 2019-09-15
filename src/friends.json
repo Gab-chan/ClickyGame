@@ -38,5 +38,15 @@
     "id": 8,
     "name": "Himiko",
     "image": "https://vignette.wikia.nocookie.net/villains/images/d/d9/HimikoTogaSmashTap.png/revision/latest?cb=20181118050403"
+  },
+  {
+    "id": 9,
+    "name": "Dabi",
+    "image": "https://vignette.wikia.nocookie.net/villains/images/0/02/DabiSmashTap.jpg/revision/latest?cb=20180203071411"
+  },
+  {
+    "id": 10,
+    "name": "Stain",
+    "image": "https://vignette.wikia.nocookie.net/bokunoheroacademia/images/9/9c/Stain_Anime_Profile.png/revision/latest?cb=20170717012325"
   }
 ]
