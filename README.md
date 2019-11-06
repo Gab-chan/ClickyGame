@@ -14,4 +14,4 @@ https://morning-bayou-09465.herokuapp.com
 
 ## Logo
 
-![alt text](https://t5.rbxcdn.com/daf5be0c3fef1c7be09f2d1d2a37a72c)
+![alt text](http://www.candydev.com/assets/img/clickygamelogo.jpg)
